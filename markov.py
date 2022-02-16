@@ -123,11 +123,14 @@ def make_sentence( model, sentence_num=5, seed="[BOS]", max_words=1000 ):
 
 def main():
     u_name = "itsuki_jpnlonvn"
+    # before -> 何日前からのツイートを取得するか
     get_tweet(u_name, before=200)
     csv2txt()
     standardize()
     text = load_text("standardized.txt")
+    # order -> 「N階マルコフ連鎖のN」、大きいと原文に近くなる
     model = make_model(text, order=2)
+    # sentence_num -> 生成する文章数
     sentence = make_sentence(model, sentence_num=10)
     res = sentence.split("[BOS]")
     print(*res, sep="\n")

@@ -4,4 +4,4 @@
 メインの処理は[このサイト](https://qiita.com/k-jimon/items/f02fae75e853a9c02127)のを引っ張ってきてます  
 
 ## 実行方法
-markov.pyをコピーして、実行すれば動くはず（mecab,twint等はインストールされている前提）
+markov.pyをコピーして、u_nameを変更し、実行すれば動くはず（mecab,twint等はインストールされている前提）
